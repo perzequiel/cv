@@ -1,0 +1,181 @@
+% FortySecondsCV LaTeX template
+% Copyright © 2019-2020 René Wirnata <rene.wirnata@pandascience.net>
+% Licensed under the 3-Clause BSD License. See LICENSE file for details.
+%
+% Please visit https://github.com/PandaScience/FortySecondsCV for the most
+% recent version! For bugs or feature requests, please open a new issue on
+% github.
+%
+% Contributors`'
+% ------------
+% * ifokkema
+% * Bertbk
+% * Hespe
+%
+% Attributions
+% ------------
+% * fortysecondscv is based on the twentysecondcv class by Carmine Spagnuolo
+%   (cspagnuolo@unisa.it), released under the MIT license and available under
+%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% * further attributions are indicated immediately before corresponding code
+
+
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+\documentclass[
+	a4paper,
+	% showframes,
+	% vline=2.2em,
+	% maincolor=cvgreen,
+	% sidecolor=gray!50,
+	% sectioncolor=red,
+	% subsectioncolor=orange,
+	% itemtextcolor=black!80,
+	% sidebarwidth=0.4\paperwidth,
+	% topbottommargin=0.03\paperheight,
+	% leftrightmargin=20pt,
+	% profilepicsize=4.5cm,
+	% profilepicborderwidth=3.5pt,
+	% profilepicstyle=profilecircle,
+	% profilepiczoom=1.0,
+	% profilepicxshift=0mm,
+	% profilepicyshift=0mm,
+	% profilepicrounding=1.0cm,
+]{fortysecondscv}
+
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% uncomment in case you don't want any hyphenation
+% \usepackage[none]{hyphenat}
+
+% take care of proper font encoding
+\ifxetexorluatex
+	\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+%	\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf} % local font
+\else
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+%	\usepackage[sfdefault]{noto} % use noto google font
+\fi
+
+% enable mathematical syntax for some symbols like \varnothing
+\usepackage{amssymb}
+
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+%% mandatory information
+% your name
+\cvname{Ezequiel Gonzalez}
+% job title/career
+% \cvjobtitle{Full Stack Developer,\\[0.2em] Panda of the Year}
+\cvjobtitle{Full Stack Developer}
+
+%% optional information
+% profile picture
+% \cvprofilepic{pics/profile.png}
+
+% NOTE: ordering in sidebar will mimic the following order
+% date of birth
+\cvbirthday{May 5, 1987}
+% short address/location, use \newline if more than 1 line is required
+\cvaddress{Falco 1059, Garin, Bs As, Argentina}
+% phone number
+\cvphone{+54 9 11 5931 4901}
+% personal website
+\cvsite{/in/ezequielgonzalezt}
+% email address
+\cvmail{ezequielgonzalezt@gmail.com}
+% pgp key
+% \cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
+% any other custom entry
+% \cvcustomdata{\faFlag}{Chinese}
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR CONTENT
+%-------------------------------------------------------------------------------
+% add more profile sections to sidebar on first page
+\addtofrontsidebar{
+	% include gosquare national flags from https://github.com/gosquared/flags;
+	% naming according to ISO 3166-1 alpha-2 country codes
+
+	\profilesection{About Me}
+	\aboutme{
+		I am an experienced developer with over 15 years of expertise designing and delivering scalable, maintainable, and high-performance applications across various industries.\\\\
+		Passionate about building clean architectures, solving complex problems, and improving systems through automation and modern development practices.\\\\
+		I see software as both an art and a science — a craft refined through continuous learning, curiosity, and hands-on experience with emerging technologies, including AI and cloud solutions.
+	}
+	\profilesection{Education}
+	\begin{cvtable}[1.5]
+		\educationitem{Universidad Tecnológica Nacional}{Systems Engineering}{2008 -- 2011}
+	\end{cvtable}
+}
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makefrontsidebar
+
+\cvsection{Experience}
+\begin{cvtable}[2]
+	\cvitem{Full Stack Developer: Pow Gaming}{May 2021 - Present}
+		{ 	- MVP development using Python and Node.js.\\
+			- Developed a B2B solution with Python, FastAPI, React, and TypeScript WebSockets.\\
+			- Designed database models in PostgreSQL and MongoDB.\\
+			- Ensured code quality by implementing Test-Driven Development TDD.\\
+			- DevOps pipelines using Docker, Docker Compose, Jenkins, Bitbucket, and AWS.\\
+			- Defined cloud architecture on AWS and Deployment.\\
+			- Developed a game engine framework with TypeScript, MongoDB, and WebSockets.\\
+			- Created and maintained technical documentation using Swagger and BookStack.\\\\
+			Tools: Python | Node.js | TypeScript | PostgreSQL | MongoDB | TDD | AWS.
+		}
+	\cvitem{Full Stack Developer: Mobomo}{March 2019 - May 2021}
+	{	- Developed and maintained an international news website.\\
+		- Designed and implemented a REST API to integrate university services.\\
+		- Integrated third-party APIs such as Salesforce and external news providers.\\
+		- Built backend services using Node.js, Express, MongoDB, Python and Flask.\\
+		- Developed frontend interfaces with React.js and Tailwind CSS.\\
+		- Created and maintained documentation using Confluence and Swagger.\\
+		- Managed cloud infrastructure and deployments using AWS.\\\\
+		Tools: Python | Flask | JavaScript | Node.js | React.js | MongoDB | AWS.
+	}
+	\cvitem{Full Stack Developer: Asap Consulting}{May 2017 - March 2019}
+	{Customer: Boehringer Ingelheim.\\\\
+		- Develop and maintain microservices and web applications.\\
+		- Backend using Node.js, Express, MongoDB, and MySQL.\\
+		- Developed responsive frontend interfaces with React.js.\\
+		- DevOps tasks and deployment using Docker, Docker Compose, and Jenkins.\\\\
+		Tools: Python | JavaScript | Node.js | MySQL | MongoDB | Docker | UnitTest.
+	}
+	\cvitem{Full Stack Developer: Kimn Consulting}{November 2014 - May 2017}
+	{	- Developed platform features with C\# and PHP.\\
+		- Developed UI with CSS, Javascript and JQuery.\\
+		- Database management and optimization with SQLServer.\\\\
+		Tools: C\# | Hiberbate | SqlServer | PHP | Laravel | Mysql | CSS | Javascript.
+	}
+	\cvitem{Back End Developer: Inworx}{May 2013 - October 2014}
+	{	Customer: BBVA\\\\
+		- Development in C\#, Java and Cobol.\\
+		- Ensure code quality Unit and integrated Test.\\
+		- Database management  with SqlServer and DB2 mainframe.\\\\
+		Tools: PHP | Laravel | MySQL | REST API.
+	}
+	\cvitem{Back End Developer: Accenture}{March 2010 - May 2013}
+	{Customer: Telecom - From February 2012 to May 2013\\\\
+		- Develop and maintain of applications in C\# and COBOL\\
+		- Database management using DB2 mainframe.\\
+		- Unit and integration testing and pre-release testing documentation.\\\\
+		Customer: Endesa Energia - From March 2010 to February 2012\\\\
+		- Development of internal applications in C++, C#, and COBOL.\\
+		- Database management using SQLServer and DB2.\\
+		- Unit and integration testing and pre-release testing documentation.\\\\
+		Tools: C++ | Bash | C\# | COBOL | SQLServer | DB2 | TortoiseSVN.
+	}
+\end{cvtable}
+\end{document}
