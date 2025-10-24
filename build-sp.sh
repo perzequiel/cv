@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Limpiar archivos auxiliares
+# Clean auxiliar files
 /Library/TeX/texbin/latexmk -C
 
-# Compilar PDF
+# Compile PDF
 /Library/TeX/texbin/latexmk -pdf spanish.tex

@@ -418,6 +418,14 @@
 		}
 	}\par%
 }
+\NewDocumentCommand{\langskill}{ O{0em} m m m O{5} }{%
+	\hspace{#1}%
+  	\cvicon{#2}~#3 \hfill #4\par%
+}
+% \NewDocumentCommand{\langskill}{ O{0em} m m m }{%
+%   \hspace{#1}%
+%   \cvicon{#2}~#3 \hfill #4\par%
+% }
 
 \newcommand{\barskill}[3]{
 	% remove 1pt in width to prevent overfull box warnings
